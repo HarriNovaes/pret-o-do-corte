@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pretão do Corte</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #E4D7C3;
+      color: #3E2C22;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      background-color: #F5E1C9;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      gap: 10px;
+    }
+
+    header .logo {
+      width: 200px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #3E2C22;
+      font-weight: bold;
+      padding: 5px 10px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #DCC9B6;
+      border-radius: 5px;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.3em;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #3E2C22;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #5A4430;
+    }
+
+    /* SEÇÕES */
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    /* SERVIÇOS */
+    .servicos-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .servicos-list li {
+      background-color: #F5E1C9;
+      padding: 15px 20px;
+      border-radius: 8px;
+      min-width: 150px;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .servicos-list li:hover {
+      background-color: #E0CBA4;
+      cursor: pointer;
+    }
+
+    /* GALERIA */
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .galeria-grid img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .galeria-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* AGENDAMENTO */
+    #agendamento select, #agendamento input[type=checkbox] {
+      margin: 5px 0;
+      padding: 5px;
+    }
+
+    #horarios-container button {
+      transition: 0.3s;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #F5E1C9;
+      color: #3E2C22;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+      }
+      .servicos-list {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="index.html">
+      <img src="logo.png" alt="Pretão do Corte" class="logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#agendamento">Agendamento</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <h1>Pretão do Corte</h1>
+    <p>Renovando autoestima através do corte</p>
+    <a href="#agendamento" class="btn">Agende seu horário</a>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <h2>Sobre a Barbearia</h2>
+    <p>Barbearia localizada em Ribeirão Preto, comandada pelo Kaique Vital, especialista em cortes que renovam sua autoestima.</p>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <h2>Serviços</h2>
+    <ul class="servicos-list">
+      <li>Corte masculino</li>
+      <li>Barba</li>
+      <li>Tratamentos capilares</li>
+      <li>Design de sobrancelha</li>
+    </ul>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria">
+    <h2>Galeria</h2>
+    <div class="galeria-grid">
+      <img src="images/imagesfoto1.jpg" alt="Corte 1">
+      <img src="images/imagesfoto2.jpg" alt="Corte 2">
+      <img src="images/imagesfoto3.jpg" alt="Corte 3">
+      <img src="images/imagesfoto4.jpg" alt="Corte 4">
+    </div>
+  </section>
+
+  <!-- AGENDAMENTO -->
+  <section id="agendamento">
+    <h2>Agende seu horário</h2>
+    <p>Escolha o dia, horário e serviço(s) desejado(s):</p>
+
+    <!-- Seleção do dia -->
+    <label for="dia">Dia:</label>
+    <select id="dia">
+      <option value="">Selecione</option>
+      <option value="2">Terça</option>
+      <option value="3">Quarta</option>
+      <option value="4">Quinta</option>
+      <option value="5">Sexta</option>
+      <option value="6">Sábado</option>
+    </select>
+
+    <!-- Seleção do horário -->
+    <div id="horarios-container" style="margin-top:10px;"></div>
+
+    <!-- Seleção de serviços -->
+    <div id="servicos-agendamento" style="margin-top:20px;">
+      <p>Selecione os serviços:</p>
+      <label><input type="checkbox" value="Corte masculino"> Corte masculino</label><br>
+      <label><input type="checkbox" value="Barba"> Barba</label><br>
+      <label><input type="checkbox" value="Tratamentos capilares"> Tratamentos capilares</label><br>
+      <label><input type="checkbox" value="Design de sobrancelha"> Design de sobrancelha</label>
+    </div>
+
+    <p id="mensagem" style="margin-top:10px; color: green; font-weight:bold;"></p>
+  </section>
+
+  <script>
+    // Horários por dia (em 30 minutos)
+    const horariosPorDia = {
+      2: ["16:00","16:30","17:00","17:30","18:00","18:30","19:00","19:30","20:00","20:30","21:00"],
+      3: ["16:00","16:30","17:00","17:30","18:00","18:30","19:00","19:30","20:00","20:30","21:00"],
+      4: ["16:00","16:30","17:00","17:30","18:00","18:30","19:00","19:30","20:00","20:30","21:00"],
+      5: ["16:00","16:30","17:00","17:30","18:00","18:30","19:00","19:30","20:00","20:30","21:00"],
+      6: ["09:00","09:30","10:00","10:30","11:00","11:30","12:00","12:30","13:00","13:30","14:00","14:30","15:00"]
+    };
+
+    const diaSelect = document.getElementById("dia");
+    const containerHorarios = document.getElementById("horarios-container");
+    const mensagem = document.getElementById("mensagem");
+    const whatsappNumber = "5516993633521"; // seu número
+
+    diaSelect.addEventListener("change", () => {
+      containerHorarios.innerHTML = "";
+      mensagem.innerText = "";
+      const dia = diaSelect.value;
+      if (!dia) return;
+
+      // Recupera horários já reservados
+      let reservas = JSON.parse(localStorage.getItem("reservas") || "{}");
+      let horariosDisponiveis = horariosPorDia[dia];
+
+      horariosDisponiveis.forEach(horario => {
+        const btn = document.createElement("button");
+        btn.innerText = horario;
+        btn.style.margin = "5px";
+        btn.style.padding = "10px 15px";
+        btn.style.border = "none";
+        btn.style.borderRadius = "5px";
+        btn.style.cursor = "pointer";
+        btn.style.backgroundColor = "#3E2C22";
+        btn.style.color = "#fff";
+
+        if (reservas[dia] && reservas[dia].includes(horario)) {
+          btn.disabled = true;
+          btn.style.backgroundColor = "#999";
+          btn.style.cursor = "not-allowed";
+        }
+
+        btn.addEventListener("click", () => {
+          // Pega serviços selecionados
+          const checkboxes = document.querySelectorAll("#servicos-agendamento input[type=checkbox]:checked");
+          if (checkboxes.length === 0) {
+            alert("Selecione pelo menos um serviço!");
+            return;
+          }
+          const servicosSelecionados = Array.from(checkboxes).map(c => c.value);
+
+          // Salva reserva
+          if (!reservas[dia]) reservas[dia] = [];
+          reservas[dia].push(horario);
+          localStorage.setItem("reservas", JSON.stringify(reservas));
+
+          // Bloqueia botão
+          btn.disabled = true;
+          btn.style.backgroundColor = "#999";
+          btn.style.cursor = "not-allowed";
+
+          // Mensagem de sucesso
+          mensagem.innerText = `Horário ${horario} reservado com sucesso! ✅`;
+
+          // Envia WhatsApp
+          const diaTexto = diaSelect.options[diaSelect.selectedIndex].text;
+          const msg = `Olá! Horário ${horario} de ${diaTexto} reservado com os serviços: ${servicosSelecionados.join(", ")}`;
+          const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`;
+          window.open(url, "_blank");
+        });
+
+        containerHorarios.appendChild(btn);
+      });
+    });
+  </script>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>WhatsApp: <a href="https://wa.me/5516993633521" class="btn" target="_blank">Clique aqui para falar</a></p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Pretão do Corte - Ribeirão Preto</p>
+  </footer>
+
+</body>
+</html>
